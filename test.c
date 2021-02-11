@@ -25,7 +25,8 @@ int main(int argc, char *argv[]) {
       return EXIT_SUCCESS;
     }
     ret = execvp(command, argv);
-    printf("ret = %d\n", ret);
+    if (ret == -1)
+    printf("ret = %d, Erreur d'exécution de la commande\n", ret);
   }
 
 
